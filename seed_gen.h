@@ -7,7 +7,7 @@
 #include <wally_bip39.h>
 #include <sodium.h>
 
-int main(void) {
+int seed_gen(void) {
     int lw_response;
     lw_response = wally_init(0);
     if (lw_response) {
