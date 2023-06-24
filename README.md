@@ -9,7 +9,7 @@ $ sh build.sh
 
 ## run
 ```console
-$ ./seed_gen
+$ ./btc_utils seed_gen
 Mnemonic: eyebrow demand stumble cloth insect cost patch smart release way ship swear
 Seed: d52b2d5e2f5448ba7ff7b5f282d2fcf50974836705f3ae5155979e54c38f6e16ab76905b9f262134281db78ab414c9a1af9d0883e034570f6f49a71ecc57b068
 Root xprv: xprv9s21ZrQH143K2bKRXW9d4pkjTt9NtBZNDazg2no6Do7cVb2eodcmpth9JBNfMk5BLbnwUUM1ZcVRteg6xQ1Yibmwr5XzNEoL7Yioz4i4aZY
