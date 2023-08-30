@@ -1,3 +1,3 @@
 #!/bin/sh
 set -xe
-clang -Wall -Wextra -Wpedantic -lwallycore -lsodium -o btc_utils btc_utils.c
+LD_LIBRARY_PATH=/usr/local/lib clang -Wall -Wextra -Wpedantic -lwallycore -lsodium -o btc_utils btc_utils.c

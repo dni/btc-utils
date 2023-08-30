@@ -12,7 +12,7 @@ int seed_gen(void) {
     lw_response = wally_init(0);
     if (lw_response) {
         printf("Error: Wally_init failed: %d\n",lw_response);
-        exit(-1);
+        exit(1);
     }
 
     unsigned char entropy[16];
