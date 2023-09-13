@@ -3,12 +3,29 @@ on:
   push:
     tags:
       - "*"
+permissions:
+  contents: write
 jobs:
   release:
     name: Release pushed tag
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: update version in pyproject.toml
+        env:
+          tag: ${{ github.ref_name }}
+        run: |
+          sed -i "s/^version.*/version = \"$tag\"/g" version.txt
+          git config --global user.name 'Alan Bits'
+          git config --global user.email 'alan@lnbits.com'
+          git commit -am "[CHORE] update version to $tag"
+          git push
+          git tag -fa $tag -m "update via workflow"
+          git push --tags
+
       - name: Create release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
